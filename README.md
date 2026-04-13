@@ -57,8 +57,8 @@ pip install torch transformers diffusers openvino[onnx] openvino-nightly optimum
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/ikiiflu/pcsx2-texture-swapper-cpu.git
-   cd pcsx2-texture-swapper-cpu
+   git clone https://github.com/ikiiflu/pcsx2-texture-swapper-OpenVINO.git
+   cd pcsx2-texture-swapper-OpenVino
    ```
 
 2. **Crie um ambiente virtual** (recomendado):
@@ -114,7 +114,7 @@ pip install torch transformers diffusers openvino[onnx] openvino-nightly optimum
 ### Estrutura de Pastas Esperada
 
 ```
-SUA_PASTA_DO_JOGO/
+SUA_TEXTURES_DO_JOGO/
 ├── dumps/           ← Texturas originais (dumped pelo PCSX2)
 │   ├── texture_001.png
 │   ├── texture_002.png
