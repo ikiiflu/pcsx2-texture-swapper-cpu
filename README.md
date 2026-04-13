@@ -71,6 +71,11 @@ pip install torch transformers diffusers openvino[onnx] openvino-nightly optimum
    ```bash
    pip install torch transformers diffusers openvino[onnx] openvino-nightly optimum[intel] pillow
    ```
+   
+   *Ou, crie um arquivo `requirements.txt` com essas dependências e instale com:*
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 4. **Execute o script**:
    ```bash
@@ -83,10 +88,13 @@ pip install torch transformers diffusers openvino[onnx] openvino-nightly optimum
 
 ### Passo a Passo
 
-1. **No PCSX2**: Configure a pasta do jogo e rode o jogo por alguns minutos para descarregar (dump) as texturas
-   - Configurações → Gráficos... → Verifique que o renderizador gráfico está habilitado
-   - Substituições de texturas: marque "Extrair texturas"
-   - Jogue o jogo para extrair as texturas.
+1. **No PCSX2**: Configure a pasta do jogo e rode o jogo por alguns minutos para extrair as texturas
+   - Abra: **Configurações → Gráficos**
+   - Verifique se o **renderizador gráfico está habilitado**
+   - Abra: **Configurações → Substituições de Texturas**
+   - Marque: ✓ **Ativar substituição de texturas**
+   - Marque: ✓ **Extrair texturas para arquivo**
+   - Jogue o jogo por 2-3 minutos (as texturas serão extraídas para `dumps/` automaticamente)
 
 2. **Execute o script**:
    ```bash
@@ -116,6 +124,13 @@ SUA_PASTA_DO_JOGO/
     ├── texture_002.png
     └── ...
 ```
+
+---
+
+## ⚡ Configuração Rápida
+
+O script usa **defaults internos** automaticamente se `prompts.json` e `random_words.json` não existirem. 
+Mas se quiser customizar seus próprios temas e palavras, siga a seção abaixo:
 
 ---
 
@@ -376,7 +391,7 @@ Sinta-se livre para:
 
 ## 🎯 Roadmap
 
-- [ ] Suporte para GPU (CUDA, ROCm, Metal)
+- [ ] Suporte para GPU (CUDA, ROCm)
 - [ ] Interface web (FastAPI + React)
 - [ ] Batch processing paralelo
 - [ ] Integração com Real-ESRGAN para upscaling
@@ -397,6 +412,6 @@ Este projeto é **experimental**. Não há garantias de qualidade ou funcionalid
 
 ---
 
-**❤️ PS2**
+**Desenvolvido com ❤️ para a comunidade PS2 e apaixonados por emulação**
 
 *Última atualização: abril de 2026*
